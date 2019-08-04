@@ -7,31 +7,32 @@ import './App.css';
 class App extends Component {
 	render() {
 		return (
-			<div>
+			<div className = "section">
 				<ScrollableAnchor id={'nav'}>
 					<NavBar />
 				</ScrollableAnchor>
 				<ScrollableAnchor id={'about'}>
 					<div className="about">
-						<h3 className="title">about me</h3>
 						<div className="avatar">
 							<Avatar src={process.env.PUBLIC_URL + '/img/profpic.jpg'} size={350} round={true} />
 						</div>
 						<div className="abouttext">
 							<h3>
-								hi! i&#39;m a fourth year cs major at uc berkeley. i'm involved with{' '}
+								hi! i&#39;m a fourth year cs major at uc berkeley. 
+              </h3>
+              <h3>  
+                i'm involved with{' '}
 								<a href="https://codebase.berkeley.edu/" target="_blank">
 									berkeley codebase
 								</a>
-								, where i&#39;m the vp of projects responsible for finding and scoping projects and
-								managing pm and developer experience, and{' '}
+								, where i&#39;m responsible for scoping projects and
+								managing pm + developer experience, and{' '}
 								<a href="https://girlswhocode.com/" target="_blank">
 									girls who code
 								</a>
-								, where i&#39;ve been a student and a TA. i'm currently interning at blackrock,
+								, where i&#39;ve been a student and a TA. i'm interning at blackrock,
 								where i do full-stack development on an web app that visualizes dataset relationships. i
-								previously interned at adobe, where i build a visual regression testing framework for
-								the livefyre team.
+								previously interned at adobe, where i built a POC visual regression testing framework.
 							</h3>
 							<h3>
 								i am fluent in python and java and familiar with web development. this summer i worked
@@ -52,6 +53,7 @@ class App extends Component {
 					</div>
 				</ScrollableAnchor>
 
+        <div className = "section">
 				<ScrollableAnchor id={'projects'}>
 					<div className="proj" styles="proj">
 						<h3 className="title">things i&#39;ve worked on </h3>
@@ -108,6 +110,7 @@ class App extends Component {
 					</div>
 				</ScrollableAnchor>
 			</div>
+      </div>
 		);
 	}
 }

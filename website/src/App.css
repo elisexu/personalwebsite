@@ -1,7 +1,7 @@
 /*-------------
 GENERAL
 -------------*/
-*{
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -11,54 +11,46 @@ GENERAL
 PAGE
 -------------*/
 
-.page {
-	overflow-y: auto;
-}
-
 /*-------------
 SECTION
 -------------*/
 
-section{
+.section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 
-	padding: 125px 100px;
+	padding: 0px 100px;
 }
 
-@media (max-width: 1000px){
-
-	section{
+@media (max-width: 1000px) {
+	.section {
 		padding: 100px 50px;
 	}
-
 }
 
-@media (max-width: 600px){
-
-	section{
+@media (max-width: 600px) {
+	.section {
 		padding: 80px 30px;
 	}
-
 }
 
-section h3.title{
-	color: #black;
-	font: bold 35px 'Garamond', sans-serif;
+section h3.title {
+	color: black;
+	font: bold 35px 'Lato', sans-serif;
 	text-align: center;
-  margin-top: -50px;
+	margin-top: -50px;
 }
 
-section h3.subtitle{
-	color: #black;
-	font: bold 23px 'Garamond', sans-serif;
+section h3.subtitle {
+	color: black;
+	font: bold 23px 'Lato', sans-serif;
 	text-align: center;
-  margin-top: 20px;
-  margin-bottom: 10px;
+	margin-top: 20px;
+	margin-bottom: 10px;
 }
 
-section p{
+section p {
 	max-width: 700px;
 	/* text-align: center; */
 	margin-bottom: 35px;
@@ -66,7 +58,8 @@ section p{
 	line-height: 2;
 }
 
-ul, nav{
+ul,
+nav {
 	list-style: none;
 }
 
@@ -74,171 +67,157 @@ ul, nav{
 TITLE + NAVBAR
 -------------*/
 
-a, a:link, a:visited{
-	/* text-decoration: none; */
+a,
+a:link,
+a:visited {
+	text-decoration: none;
 	color: #042a4d;
 	cursor: pointer;
 
 	opacity: 0.9;
 }
 
-header h1{
-  font-size: 3.5em;
-  text-align: center;
+header h1 {
+	font-size: 3.5em;
+	text-align: center;
 }
 
 header hr {
-  border: 0;
-    height: 1px;
-    background: #333;
-    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+	border: 0;
+	height: 1px;
+	background: #333;
+	background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
-header{
+header {
 	top: 0;
 	left: 0;
 	z-index: 10;
-	width: 100%;
+	width: 110vh;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px 100px 20px;
-  font-family: Garamond;
-  font-size: 23px;
+	padding: 20px;
+	font-family: Lato;
+	font-size: 23px;
 }
 
-header nav{
+#title {
+	text-align: left;
+}
+
+#links {
+	/* text-align: right; */
+}
+
+header nav {
 	display: flex;
 	align-items: center;
-  justify-content: center;
+	justify-content: center;
 }
 
-header nav li{
+header nav li {
 	margin: 0 30px;
-  color: black;
+	color: black;
 }
 
-header nav li:first-child{
+header nav li:first-child {
 	margin-left: 0;
 }
 
-header nav li:last-child{
+header nav li:last-child {
 	margin-right: 0;
 }
 
-@media (max-width: 1000px){
-	header{
+@media (max-width: 1000px) {
+	header {
 		padding: 20px 50px;
 	}
 }
 
-@media (max-width: 700px){
-	header{
+@media (max-width: 700px) {
+	header {
 		flex-direction: column;
 	}
-
 }
 
 /*-------------
 ABOUT
 -------------*/
 
-.about{
+.about {
 	position: relative;
 	justify-content: center;
 	min-height: 50vh;
+	width: 110vh;
 	color: black;
 	text-align: center;
-  /* margin-bottom: -6em; */
+	/* margin-bottom: -6em; */
 }
 
-.about .background-image{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-	background-color: #2196F3;
-	z-index: -1;
-  opacity: 0.45;
-}
+/* .about .avatar {
+	float: left;
+	padding: 50px 20px 20px 20px;
+} */
 
-.about .background-image:after{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-.about .avatar {
-  float: left;
-  padding: 50px 20px 20px 20px
-}
-
-.about h1{
-	font: bold 60px 'Garamond', sans-serif;
+.about h1 {
+	font: bold 60px 'Lato', sans-serif;
 	margin-bottom: 15px;
 }
 
-.about h3{
-	font: normal 24px 'Garamond', sans-serif;
+.about h3 {
+	font: normal 24px 'Lato', sans-serif;
 	margin-bottom: 40px;
-  text-align: left;
+	text-align: left;
 }
 
 .about .lnk {
 	text-align: center;
 }
 
-@media (max-width: 800px){
-
-	.about{
+@media (max-width: 800px) {
+	.about {
 		min-height: 600px;
 	}
 
-	.about h1{
+	.about h1 {
 		font-size: 48px;
 	}
 
-	.about h3{
+	.about h3 {
 		font-size: 24px;
 	}
-
 }
 
 /*-------------
 PROJECTS
 -------------*/
 .proj .title {
-  margin-bottom: 50px;
+	margin-bottom: 50px;
 }
-.proj{
+.proj {
 	background-color: #fff;
-  font-family: Garamond;
-  position: relative;
+	font-family: Lato;
+	position: relative;
 	justify-content: center;
 	min-height: 100vh;
 	text-align: center;
 }
 
 .projimg {
-  position: relative;
-  text-align: center;
+	position: relative;
+	text-align: center;
 }
 
-.proj p{
-  text-align: left;
-  max-width: 800px;
-  margin: auto;
-  font-size: 20px;
+.proj p {
+	text-align: left;
+	max-width: 800px;
+	margin: auto;
+	font-size: 20px;
 	margin-bottom: 50px;
-
 }
 
-.proj .grid li{
+.proj .grid li {
 	padding: 20px;
 	height: 350px;
 	border-radius: 3px;
@@ -249,11 +228,11 @@ PROJECTS
 	background-color: #333;
 }
 
-.proj .grid li.small{
+.proj .grid li.small {
 	flex-basis: 40%;
 }
 
-.proj .grid li.large{
+.proj .grid li.large {
 	flex-basis: 60%;
 }
 
@@ -261,12 +240,9 @@ PROJECTS
 	text-align: center;
 }
 
-
-@media (max-width: 1000px){
-
+@media (max-width: 1000px) {
 	.proj .grid li.small,
-	.proj .grid li.large{
+	.proj .grid li.large {
 		flex-basis: 100%;
 	}
-
 }
